@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>Classify Binder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+    }
+    #p1 {
+	  margin-top: -50px;
+      font-size : 30px;
+      font-family: "Lato", sans-serif;
+      color: black;
+    }
+    #heading {
+	align: center;
+	font-family: "Lato", sans-serif;
+       font-family: 'Aladin';font-size: 82px;
+      color: black;
+    }
+    #p3 {
+    margin-left : 80px;
+    font-size : 27px;
+    font-family: "Lato", sans-serif;
+    color: black;
+    }
+    img{
+    margin-left : 100px;
+    margin-top : 100px;
+    border : 1.5px solid white;
+    float: left;
+    height : 640px;
+    width : 550px;
+    padding-right : 140px;
+    }
+    .b1 {
+      background-color: white;
+      border : 2px solid black;
+      border-radius : 10px;
+      padding: 8px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      margin-left :105px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .b1:hover {
+      background-color:	black;
+      color: white;
+    }
+	#dir {
+	border: 2px solid black;
+	width : 250px;
+	height : 50px;
+	margin-left : 40px;
+	margin-right : 20px;
+	border-radius: 10px;
+  	box-sizing: border-box;
+  	padding: 12px 14px;
+	}
+  </style>
+  <script language="javascript">
+    function change() {
+		var image = document.getElementById('be');
+            if (image.src.match("before")) {
+                image.src = "static/after.png";
+            }
+            else {
+                image.src = "static/before.png";
+            }
+    }
+</script>
+</head>
+<body>
+	<img src="static/before.png" id="be" onclick="change()"/><br><br><br><br><br><br><br><br>
+	<h1 id="heading">File Classification</h1>
+	<pre><p id="p1">      	  			 The Classify Binder (16MINIB - 17)</p> </pre> 
+	<form action="/page" method="post">
+		<input type="text" id="dir" name = "c" placeholder="Directory..!!">
+        <button type="submit" class="b1">Classify</button>
+    </form><br>
+    <form action="/page1" method="post">
+    	<input type="text" id= "dir" name="c1" placeholder="Directory for undo..!!"><br> <br>
+		<input type="text" id="dir" name = "u" placeholder="Exception folders while undo!!">
+        <button type="submit" class="b1">Undoo.!</button>
+    </form>
+</body>
+</html>
